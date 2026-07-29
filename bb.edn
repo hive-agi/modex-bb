@@ -1,2 +1,9 @@
 {:paths ["src"]
- :deps {cheshire/cheshire {:mvn/version "6.2.0"}}}
+ :deps  {cheshire/cheshire {:mvn/version "6.2.0"}}
+ :tasks
+ {test {:doc         "Run the test suite."
+        :extra-paths ["test"]
+        :requires    ([clojure.test :as t]
+                      [modex-bb.mcp.tools-test])
+        :task        (let [{:keys [fail error]} (t/run-tests 'modex-bb.mcp.tools-test)]
+                       (System/exit (if (pos? (+ fail error)) 1 0)))}}}

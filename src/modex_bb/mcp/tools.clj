@@ -13,7 +13,8 @@
 
 (defn tool-arg->property
   [^Parameter tool-arg]
-  (select-keys tool-arg [:type :doc :required]))
+  (cond-> {:type (:type tool-arg)}
+    (:doc tool-arg) (assoc :description (:doc tool-arg))))
 
 (defn tool-args->input-schema [args]
   (into {}
