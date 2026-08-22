@@ -1,5 +1,14 @@
 # modex-bb
 
+<!-- hive-badges -->
+
+[![Clojars Project](https://img.shields.io/clojars/v/io.github.hive-agi/modex-bb.svg)](https://clojars.org/io.github.hive-agi/modex-bb)
+[![cljdoc](https://cljdoc.org/badge/io.github.hive-agi/modex-bb)](https://cljdoc.org/d/io.github.hive-agi/modex-bb/CURRENT)
+[![release](https://github.com/hive-agi/modex-bb/actions/workflows/release.yml/badge.svg)](https://github.com/hive-agi/modex-bb/actions/workflows/release.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+<!-- /hive-badges -->
+
 Babashka MCP server framework. Build [Model Context Protocol](https://modelcontextprotocol.io/) servers that run on [Babashka](https://babashka.org/) with zero JVM startup time.
 
 ## Features
