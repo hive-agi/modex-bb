@@ -1,0 +1,6 @@
+{:project-id "modex-bb"
+ :parent "hive"
+ :description "Babashka MCP server framework — stdio JSON-RPC transport, a declarative tools DSL with typed params/defaults/validation, MCP 2024-11-05 protocol, single dependency, zero JVM startup."
+ :language :clojure
+ :tags ["mcp" "babashka" "framework" "tooling"]
+ :carto {:source-roots ["resources" "src" "test"]}}
