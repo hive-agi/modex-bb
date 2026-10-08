@@ -1,3 +1,0 @@
-{:no-doc {:type :string},
- :optional-number {:type :number, :description "Max rows"},
- :required-string {:type :string, :description "SQL query"}}
