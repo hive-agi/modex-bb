@@ -12,8 +12,13 @@
   (input-schema [this]))
 
 (defn tool-arg->property
+  "JSON Schema (draft 2020-12) property for one tool argument.
+   `:required` stays off the property: it is a string array on the object
+   schema (see `input-schema`), and a boolean here makes the schema invalid.
+   `:doc` is not a JSON Schema keyword; it is emitted as `description`."
   [^Parameter tool-arg]
-  (select-keys tool-arg [:type :doc :required]))
+  (cond-> {:type (:type tool-arg)}
+    (:doc tool-arg) (assoc :description (:doc tool-arg))))
 
 (defn tool-args->input-schema [args]
   (into {}
